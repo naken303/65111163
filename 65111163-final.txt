@@ -1,0 +1,132 @@
+// 1. Algorithm: CalculateTriangleArea
+// import 'dart:math';
+// dynamic calculateTriangleArea(double sideA, double sideB, double sideC) {
+//   if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
+//     return "Error: All side lengths must be positive numbers.";
+//   }
+//   if ((sideA + sideB <= sideC) || (sideA + sideC <= sideB) || (sideB + sideC <= sideA)) {
+//     return "Error: The given sides do not form a triangle.";
+//   }
+//   double semiPerimeter = (sideA + sideB + sideC) / 2;
+  
+//   double area = sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC));
+//   return area;
+// }
+
+// void main() {
+//   print(calculateTriangleArea(1, 1, 1));
+// }
+
+// 2. Algorithm check Odd or Event
+// void main() {
+//   int number = 15;
+//   if (number % 2 == 0) {
+//     print("$number is even.");
+//   } else {
+//     print("$number is odd.");
+//   }
+//   for (int i = 1; i <= 5; i++) {
+//     print("Number: $i");
+//   }
+// }
+
+// 3. Write a Dart program that calculates the sum of all multiples of 3 and 5 below a given number n.
+// void main() {
+//   var n = 3;
+//   if (n < 0) {
+//     print("Please enter a valid positive integer.");
+//     return;
+//   }
+//   int sum = 0;
+//   for (int i = 1; i <= n; i++) {
+//     if ((i % 3 == 0) || (i % 5 == 0)) {
+//       sum = sum + 1;
+//     }
+//   }
+//   print("The sum of all multiples of 3 and 5 below $n is: $sum");
+// }
+// 4. Write a Dart program that defines a function to calculate the factorial of a given number. The program should prompt the user to enter a positive integer and then use the function to compute and print the factorial of the entered number.
+// dynamic factorial(n) {
+//   if (n == 0) {
+//     return 1;
+//   } else {
+//     return n * factorial(n - 1);
+//   }
+// }
+// void main() {
+//   int n = 3;
+//   if (n < 0) {
+//     print("Please enter a valid positive integer.");
+//     return;
+//   }
+//   int result = factorial(n);
+//   print("The factorial of $n is: $result");
+// }
+// 5. Write a Dart program that manages a list of student names. The program should allow the user to add new student names, remove existing ones, and display all the student names in the list. you need to wire own driven code with your self to test the function.
+
+void addStudent(students, name) {
+  students.add(name);
+  print("Student $name added.");
+  return;
+}
+
+void removeStudent(students, String name) {
+  if (students.contains(name)) {
+    students.remove(name);
+    print("Student 'name' removed.");
+  } else {
+    print("Student 'name' not found.");
+  }
+  return;
+}
+
+void displayStudents(students) {
+  if (students.length == 0) {
+    print("No students in the list.");
+  } else {
+    print("Student names:");
+    for (final name in students) {
+      print(name);
+    }
+  }
+  return;
+}
+
+void main() {
+  List<String>students = [];
+  addStudent(students, "Chanankorn");
+  addStudent(students, "Jonksuk");
+  addStudent(students, "Sirirat");
+  addStudent(students, "Birawit");
+  displayStudents(students);
+  removeStudent(students, "CJ");
+  removeStudent(students, "Jonksuk");
+  displayStudents(students);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
